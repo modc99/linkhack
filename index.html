@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link-hack-LRG</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://media1.giphy.com/media/wdPyyJhJcp3AYUyVYo/giphy.gif?cid=ecf05e4708a8067fea1812dccaaf9a7132a5f0e9bc10a89c&ep=v1_gifs_gifId&rid=giphy.gif&ct=g');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .container button:hover {
+            background-color: #45a049;
+        }
+        p{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>กดติดตาม YouTube ก่อนจึ่งสามารถ download ได้</p>
+        <button id="followBtn" onclick="followYouTube()">ติดตาม YouTube</button>
+        <br><br>
+        <button id="downloadBtn" onclick="download()" disabled>ดาวน์โหลด</button>
+    </div>
+
+    <script>
+        var countdown = 10;
+        var downloadBtn = document.getElementById('downloadBtn');
+        var followBtn = document.getElementById('followBtn');
+
+        function followYouTube() {
+            window.open('https://www.youtube.com/@sumopes224/featured', '_blank');
+            // ตรวจสอบสถานะการติดตาม YouTube ของผู้ใช้
+            var isFollowingYouTube = true; // เปลี่ยนค่าตามสถานะการติดตามจริง
+
+            if (isFollowingYouTube) {
+                downloadBtn.disabled = false;
+            } else {
+                alert('กรุณาติดตาม YouTube ก่อนกดปุ่มดาวน์โหลด');
+            }
+        }
+        function download() {
+            window.open('https://dupload.net/xxh25jookqa6', '_blank');
+            // ตรวจสอบสถานะการติดตาม YouTube ของผู้ใช้
+            var isFollowingYouTube = true; // เปลี่ยนค่าตามสถานะการติดตามจริง
+
+            if (isFollowingYouTube) {
+                downloadBtn.disabled = false;
+            } else {
+                alert('#');
+            }
+        }
+
+        function updateCountdown() {
+            followBtn.textContent = 'เหลือเวลาอีก ' + countdown + ' วินาที';
+            
+
+            if (countdown === 0) {
+                followBtn.disabled = false;
+                followBtn.textContent = 'ติดตาม YouTube';
+            } else {
+                countdown--;
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+
+        setTimeout(updateCountdown, 1000);
+        
+    </script>
+</body>
+</html>
