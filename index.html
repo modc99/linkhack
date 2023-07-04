@@ -42,11 +42,20 @@
 
         p {
             font-size: 25px;
+            color: red;
         }
 
         img {
             max-width: 100%;
             height: auto;
+        }
+        h1{
+            color: red;
+        }
+        h2{
+            color: red;
+            font-size: 30px;
+            
         }
     </style>
 </head>
@@ -54,16 +63,13 @@
     <div class="container">
         <h1>ติดต่อโฆษณา@line modc789</h1>
         <img src="img/ksn.gif" alt="">
-        <p>กดติดตาม YouTube ก่อนจึงสามารถดาวน์โหลดได้</p>
+        <h1>กดติดตาม YouTube ก่อนจึงสามารถดาวน์โหลดได้ และ รับรหัส 2 สุดท้าย</h1>
+        <h2>=>รหัส ****45 อีก 4 ตัวเอาในคลิป<=</h2>
         <button id="followBtn" onclick="followYouTube()">ติดตาม YouTube</button>
-        <br><br><p>MOD MENU PC</p>
+        <br><br><h1>MOD MENU PC ตัวเกม</h1>
         <button id="downloadBtn1" onclick="download()" disabled>ดาวน์โหลด</button>
-        <br><br><p>MOD MENU Mobile</p>
+        <br><br><h1>MOD MENU Mobile ในมือถือต้องใช่แอปโคลน</h1>
         <button id="downloadBtn2" onclick="download1()" disabled>ดาวน์โหลด</button>
-        <br><br><p>(จำเป็น) ในมือถือต้องใช่แอปโคลน (App Clone)</p>
-        <button id="downloadBtn3" onclick="download2()" disabled>ดาวน์โหลด</button>
-        <br><br><p>LINE RANGERS 9.0.3 32BIT ใช้ตัวนี้เท่านั้น</p>
-        <button id="downloadBtn4" onclick="download3()" disabled>ดาวน์โหลด</button>
         <br><br><h1>ติดต่อโฆษณา@line modc789</h1>
         <img src="img/ksn.gif" alt="">
     </div>
@@ -72,27 +78,24 @@
         var countdown = 10;
         var downloadBtn1 = document.getElementById('downloadBtn1');
         var downloadBtn2 = document.getElementById('downloadBtn2');
-        var downloadBtn3 = document.getElementById('downloadBtn3');
-        var downloadBtn4 = document.getElementById('downloadBtn4');
         var followBtn = document.getElementById('followBtn');
 
         function followYouTube() {
             window.open('https://www.youtube.com/@sumopes224/featured', '_blank');
             // ตรวจสอบสถานะการติดตาม YouTube ของผู้ใช้
+            
             var isFollowingYouTube = true; // เปลี่ยนค่าตามสถานะการติดตามจริง
 
             if (isFollowingYouTube) {
                 downloadBtn1.disabled = false;
                 downloadBtn2.disabled = false;
-                downloadBtn3.disabled = false;
-                downloadBtn4.disabled = false;
             } else {
                 alert('กรุณาติดตาม YouTube ก่อนกดปุ่มดาวน์โหลด');
             }
         }
 
         function download() {
-            window.open('https://dupload.net/ym978fw4mvoy', '_blank');
+            window.open('https://dupload.net/m9e1k1yonvsh', '_blank');
             // ตรวจสอบสถานะการติดตาม YouTube ของผู้ใช้
             var isFollowingYouTube = true; // เปลี่ยนค่าตามสถานะการติดตามจริง
 
@@ -104,7 +107,7 @@
         }
 
         function download1() {
-            window.open('https://dupload.net/eeoa79dm3c5u', '_blank');
+            window.open('https://dupload.net/lpkmx4baw7z7', '_blank');
             // ตรวจสอบสถานะการติดตาม YouTube ของผู้ใช้
             var isFollowingYouTube = true; // เปลี่ยนค่าตามสถานะการติดตามจริง
 
@@ -114,31 +117,7 @@
                 alert('#');
             }
         }
-
-        function download2() {
-            window.open('https://dupload.net/loiq9hho6rrp', '_blank');
-            // ตรวจสอบสถานะการติดตาม YouTube ของผู้ใช้
-            var isFollowingYouTube = true; // เปลี่ยนค่าตามสถานะการติดตามจริง
-
-            if (isFollowingYouTube) {
-                downloadBtn3.disabled = false;
-            } else {
-                alert('#');
-            }
-        }
-
-        function download3() {
-            window.open('https://dupload.net/9ttqgi2wxo8v', '_blank');
-            // ตรวจสอบสถานะการติดตาม YouTube ของผู้ใช้
-            var isFollowingYouTube = true; // เปลี่ยนค่าตามสถานะการติดตามจริง
-
-            if (isFollowingYouTube) {
-                downloadBtn4.disabled = false;
-            } else {
-                alert('#');
-            }
-        }
-
+    
         function updateCountdown() {
             followBtn.textContent = 'เหลือเวลาอีก ' + countdown + ' วินาที';
 
